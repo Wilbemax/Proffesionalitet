@@ -1,0 +1,35 @@
+.wrapper {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rocket img {
+    width: 450px;
+    pointer-events: none;
+}
+.side {
+ width: 650px;
+}
+.title {
+    
+    font-weight: bold;
+    font-size: 51px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.title span,  .subTitle span {
+    color: var(--primary-color);
+}
+.subTitle {
+    max-width: 600px;
+  
+    font-size: 21px;
+    font-weight: 400;
+    color: var( --grey-color);
+    margin-bottom: 3rem;
+
+}

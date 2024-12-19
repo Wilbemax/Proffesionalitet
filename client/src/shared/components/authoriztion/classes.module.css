@@ -1,0 +1,36 @@
+.title {
+	margin-top: 5rem;
+	font-size: 35px;
+	color: var(--text-color);
+	margin-bottom: 2rem;
+	font-weight: bold;
+}
+.title span {
+	color: var(--primary-color);
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.img {
+	animation: float 8s infinite ease-in-out;
+}
+@keyframes float {
+    0% {
+      transform: translate(0, 0) rotate(-5deg); /* Начальная точка */
+    }
+    25% {
+      transform: translate(10px, -20px) rotate(0deg); /* Наклон уменьшается */
+    }
+    50% {
+      transform: translate(0, -10px) rotate(5deg); /* Вершина качания */
+    }
+    75% {
+      transform: translate(-10px, 10px) rotate(0deg); /* Обратный наклон */
+    }
+    100% {
+      transform: translate(0, 0) rotate(-5deg); /* Возврат к начальной точке */
+    }
+  }
+  

@@ -1,0 +1,21 @@
+.wrapper {
+	margin-top: 5rem;
+	display: flex;
+    flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.video video {
+	width: 600px;
+	border-radius: 10px;
+}
+.title {
+	font-size: 30px;
+	color: var(--text-color);
+	margin-bottom: 1rem;
+	font-weight: bold;
+}
+.title span {
+    color: var(--primary-color);
+}

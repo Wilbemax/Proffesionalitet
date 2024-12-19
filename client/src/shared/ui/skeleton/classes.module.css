@@ -1,0 +1,94 @@
+.skeleton {
+    padding: 1rem;
+    max-width: 650px;
+    width: 100%;
+    height: 250px;
+    background: var(--grey-color);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+}
+
+.skeletonSquare {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    background: rgba(130, 130, 130, 0.2);
+    background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+    background-size: 800px 100px;
+    animation: wave-squares 2s infinite ease-out;
+}
+
+.skeletonLine {
+    height: 12px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    background: rgba(130, 130, 130, 0.2);
+    background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+    background-size: 800px 100px;
+    animation: wave-lines 2s infinite ease-out;
+}
+
+.skeletonRight {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.skeletonLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 200px;
+    flex: 2;
+    padding-right: 15px;
+}
+
+.skeletonLine:last-child {
+    margin-bottom: 0;
+}
+
+.h8 {
+    height: 8px;
+}
+
+.h17 {
+    height: 30px;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w75 {
+    width: 75%;
+}
+
+.m10 {
+    margin-bottom: 10px;
+}
+
+@keyframes wave-lines {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+@keyframes wave-squares {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}

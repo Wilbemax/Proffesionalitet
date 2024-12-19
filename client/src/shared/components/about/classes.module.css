@@ -1,0 +1,27 @@
+.title {
+    margin-top: 5rem;
+    font-size: 35px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text {
+    font-size: 18px;
+    color: var(--text-color);
+    max-width: 600px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.text span {
+    color: var(--primary-color);
+}
+
+.teem img{
+    width: 500px;
+}

@@ -1,0 +1,33 @@
+.header {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{ 
+    width: 70px;
+}
+.navigation{ 
+    font-weight: 400;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 18px;
+}
+.wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.navigation a {
+    cursor: pointer;
+    color: var(--text-color);
+    transition: var(--o-transition);
+}
+.navigation a:hover {
+    color: var(--primary-color);
+}
+
+.theme {
+    color: var(--primary-color);
+    background: transparent;
+}

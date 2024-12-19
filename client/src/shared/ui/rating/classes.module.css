@@ -1,0 +1,15 @@
+.ratingContainer {
+	display: flex;
+	gap: 5px;
+}
+
+.star svg {
+	width: 24px;
+	height: 24px;
+	color: #ffd700; /* Цвет звезд (золотой) */
+	transition: color 0.3s ease;
+}
+
+.star:hover svg {
+	color: #ffcc00; /* Цвет при наведении */
+}

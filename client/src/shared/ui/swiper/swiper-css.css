@@ -1,0 +1,46 @@
+.swiper-container {
+	
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+.swiper {
+	width: 100%;
+}
+
+.slide-content {
+	box-shadow: none;
+}
+
+.custom-navigation {
+	display: flex;
+	justify-content: flex-start;
+	gap: 15px;
+	
+}
+
+.custom-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 10px;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-button svg {
+	color: var(--grey-color);
+	transition: color 0.3s ease;
+}
+
+.custom-button:hover svg {
+	color: var(--primary-color);
+}
