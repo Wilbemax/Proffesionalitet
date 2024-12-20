@@ -30,5 +30,5 @@ npm run dev
 
 в коносли на сервере должно быть 
 ```bash
-сервер запущен на 5000 порту
+server was started on port = 5000
 ```
