@@ -22,8 +22,8 @@ export const SignInForm = () => {
             <Input placeholder="Введите почту" value={email} onChange={(e) => setEmail(e.target.value)} inputType="email" theme="dark" />
             <Input placeholder="Введите пароль" value={password} onChange={(e) => setPassword(e.target.value)} type="password" theme="dark" />
             <NavLink to='/recover' className={classes.recover}>Забыли пароль?</NavLink>
-            <Button buttonType='submit' type="primary" >Войти</Button>
-            <NavLink to='/registration'><Button buttonType='reset' type="secondary" >Нет аккаунта</Button></NavLink>
+            <Button buttonType='submit' type="primary" width={'100%'}>Войти</Button>
+            <NavLink to='/registration' style={{width: '100%'}}><Button buttonType='reset' type="secondary" width={'100%'}>Нет аккаунта</Button></NavLink>
         </form >
 
     )

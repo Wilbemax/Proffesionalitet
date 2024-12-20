@@ -6,3 +6,5 @@ export { Landing } from './landing/landing';
 export { SearchUi } from './search/search';
 export { ContestUI } from './contests/contest';
 export { Subscribe } from './subscribe/subscribe';
+export { ReviewsUI } from './reviews/reviews';
+export { Footer } from './footer/footer';

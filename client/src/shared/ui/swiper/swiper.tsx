@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper as SwiperInstance } from "swiper/types";
 import "swiper/css";
 import "./swiper-css.css"; // Ваш CSS-файл для кастомизации
@@ -9,37 +9,46 @@ import { Skeleton } from "../skeleton/skeleton";
 
 interface CustomSwiperProps {
     children: React.ReactNode;
+    width?: number | string;
 }
 
-export const CustomSwiper: React.FC<CustomSwiperProps> = ({ children }) => {
+export const CustomSwiper: React.FC<CustomSwiperProps> = ({ children, width }) => {
     const swiperRef = useRef<SwiperInstance | null>(null);
 
     return (
-        <div className="swiper-container">
+        <div className="swiper-container" style={{ width: width }}>
             <Swiper
-                modules={[Navigation]}
-                spaceBetween={20}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
-                 slidesPerView="auto"
+                modules={[Navigation, Autoplay]}
+                spaceBetween={20} 
+                slidesPerView="auto" 
                 onBeforeInit={(swiper) => {
                     swiperRef.current = swiper;
                 }}
                 effect="slide"
                 navigation
+                loop // Включаем зацикливание слайдов
             >
-                <SwiperSlide>
-                    <Skeleton />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Skeleton />
-                </SwiperSlide><SwiperSlide>
-                    <Skeleton />
-                </SwiperSlide><SwiperSlide>
-                    <Skeleton />
-                </SwiperSlide><SwiperSlide>
-                    <Skeleton />
-                </SwiperSlide>
-                {/* {children} */}
+                {children ? (
+                    <>{children}</>
+                ) : (
+                    <>
+                        <SwiperSlide style={{ width: "100%%" }}>
+                            <Skeleton />
+                        </SwiperSlide>
+                        <SwiperSlide style={{ width: "100%%" }}>
+                            <Skeleton />
+                        </SwiperSlide>
+                        <SwiperSlide style={{ width: "100%%"}}>
+                            <Skeleton />
+                        </SwiperSlide>
+                        <SwiperSlide style={{ width: "100%%" }}>
+                            <Skeleton />
+                        </SwiperSlide>
+                        <SwiperSlide style={{ width: "100%%" }}>
+                            <Skeleton />
+                        </SwiperSlide>
+                    </>
+                )}
             </Swiper>
 
             {/* Кнопки навигации */}

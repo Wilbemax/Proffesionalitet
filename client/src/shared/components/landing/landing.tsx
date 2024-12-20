@@ -27,12 +27,12 @@ export const Landing = ({ contests }: { contests?: ContestsType }) => {
 
                     <CustomSwiper >
 
-                        {/* Передаём слайды как children */}
+                        {/* Передаём слайды как children
                         <SwiperSlide className="slide">Слайд 1</SwiperSlide>
                         <SwiperSlide className="slide">Слайд 2</SwiperSlide>
                         <SwiperSlide className="slide">Слайд 3</SwiperSlide>
                         <SwiperSlide className="slide">Слайд 4</SwiperSlide>
-                        <SwiperSlide className="slide">Слайд 5</SwiperSlide>
+                        <SwiperSlide className="slide">Слайд 5</SwiperSlide> */}
 
                     </CustomSwiper>
                 </div>

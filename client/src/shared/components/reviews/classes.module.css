@@ -1,0 +1,42 @@
+.title {
+    margin-top: 5rem;
+    font-size: 35px;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.card {
+    width: 600px;
+    padding: 1rem;
+    background: var(--grey-color);
+    border-radius: 10px;
+}
+.typography{
+    display: flex;  
+    gap: 1rem;
+}
+
+.name{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.time{
+    margin-top: .2rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: var(--text-color);
+}
+.text{
+    line-height: 1.3;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}

@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { SignInForm } from "../../features/auth/ui/sign-in-form";
-import { About, AuthorizationUi, ContestUI, Greating, Header, Landing, SearchUi, Subscribe } from "../../shared/components";
-import { Container } from "../../shared/ui";
+import { About, AuthorizationUi, ContestUI, Footer, Greating, Header, Landing, ReviewsUI, SearchUi, Subscribe } from "../../shared/components";
 
 export default function Home() {
     const [search, setSearch] = useState("");
     const [email, setEmail] = useState("");
     return (
-        <Container>
+        <>
             <Header />
             <Landing />
             <About />
@@ -18,6 +17,8 @@ export default function Home() {
             <SearchUi onSearch={setSearch} value={search}/>
             <ContestUI />
             <Subscribe value={email} onChange={setEmail} />
-        </Container>
+            <ReviewsUI />
+            <Footer />
+        </>
     )
 }
