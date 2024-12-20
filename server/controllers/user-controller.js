@@ -1,4 +1,5 @@
 const ApiError = require('../exceptions/api-error');
+const contestService = require('../service/contest-service');
 const userService = require('../service/user-service');
 const { validationResult } = require('express-validator');
 
@@ -77,6 +78,15 @@ class UserController {
         try {
             const users = await userService.getAllUsers();
             return res.json(users);
+        } catch (e) {
+            next(e);
+        }
+    }
+
+    async getContests(_, res, next) {
+        try {
+            const contests = await contestService.getContest();
+            return res.json(contests);
         } catch (e) {
             next(e);
         }

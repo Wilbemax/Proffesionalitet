@@ -11,4 +11,4 @@ class ContestService {
 	}
 }
 
-module.exports =  new ContestService();
+module.exports = new ContestService();

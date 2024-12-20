@@ -8,3 +8,4 @@ export { ContestUI } from './contests/contest';
 export { Subscribe } from './subscribe/subscribe';
 export { ReviewsUI } from './reviews/reviews';
 export { Footer } from './footer/footer';
+export { RootLayout } from './root-layout/root-layout';

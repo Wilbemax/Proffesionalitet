@@ -1,24 +1,24 @@
 import { useState } from "react";
-import { SignInForm } from "../../features/auth/ui/sign-in-form";
-import { About, AuthorizationUi, ContestUI, Footer, Greating, Header, Landing, ReviewsUI, SearchUi, Subscribe } from "../../shared/components";
+import { SignIn } from "../../features/auth/ui/sign-in-form";
+import { About, AuthorizationUi, Greating, ReviewsUI, Subscribe } from "../../shared/components";
+import { ContestBlock } from "../../features/contests/contests-block";
+import { LandingFeature } from "../../features/landing-feature/landing-feature";
 
 export default function Home() {
-    const [search, setSearch] = useState("");
     const [email, setEmail] = useState("");
     return (
         <>
-            <Header />
-            <Landing />
+
+            <LandingFeature />
             <About />
             <Greating />
             <AuthorizationUi>
-                <SignInForm />
+                <SignIn />
             </AuthorizationUi>
-            <SearchUi onSearch={setSearch} value={search}/>
-            <ContestUI />
+            <ContestBlock />
             <Subscribe value={email} onChange={setEmail} />
             <ReviewsUI />
-            <Footer />
+
         </>
     )
 }

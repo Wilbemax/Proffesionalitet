@@ -11,7 +11,8 @@ export const Rating = ({ rating }: RatingProps) => {
     if (rating > i && rating < i + 1) return 'half'; 
     return 'empty'; 
   });
-  console.log(stars);
+
+ 
   
   return (
     <div className={classes.ratingContainer}>

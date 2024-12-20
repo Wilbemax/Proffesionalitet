@@ -1,19 +1,12 @@
-import { Container } from  "../../ui"
+import { Container, ContestCard } from "../../ui"
 import classes from './classes.module.css'
 import rocket from '../../../assets/rocket.png'
-import { CustomSwiper } from  "../../ui"
-import { SwiperSlide } from 'swiper/react'
+import { CustomSwiper } from "../../ui"
+import { ContestI } from "../../http/type"
+import { SwiperSlide } from "swiper/react"
 
-type ContestsType = {
-    id: string,
-    title: string,
-    description: string,
-    photo: string,
-    rating: number,
-    peoplesCount: number,
-}
 
-export const Landing = ({ contests }: { contests?: ContestsType }) => {
+export const Landing = ({ contests }: { contests?: ContestI[] }) => {
     return (
         <Container>
             <div className={classes.wrapper}>
@@ -23,17 +16,18 @@ export const Landing = ({ contests }: { contests?: ContestsType }) => {
                 <div className={classes.side}>
                     <h1 className={classes.title}>Моя <span>семья</span> &mdash; мой<span> космос </span></h1>
                     <p className={classes.subTitle}>Зови всю семью, <span>записывайтесь</span> на конкурсы, <span>участвуйте</span>, побеждайте и получайте <span>призы</span></p>
-
-
                     <CustomSwiper >
-
-                        {/* Передаём слайды как children
-                        <SwiperSlide className="slide">Слайд 1</SwiperSlide>
-                        <SwiperSlide className="slide">Слайд 2</SwiperSlide>
-                        <SwiperSlide className="slide">Слайд 3</SwiperSlide>
-                        <SwiperSlide className="slide">Слайд 4</SwiperSlide>
-                        <SwiperSlide className="slide">Слайд 5</SwiperSlide> */}
-
+                        {contests && contests.map(contest => <SwiperSlide>
+                            <ContestCard
+                                key={contest.contestId}
+                                contestId={contest.contestId}
+                                name={contest.name}
+                                description={contest.description}
+                                coverImage={contest.coverImage}
+                                registeredCount={contest.registeredCount}
+                                rating={contest.rating}
+                            />
+                        </SwiperSlide>)}
                     </CustomSwiper>
                 </div>
             </div>

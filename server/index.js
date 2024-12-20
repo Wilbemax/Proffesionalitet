@@ -26,7 +26,7 @@ app.use(errorMidleware);
 const start = async () => {
 	try {
 		await mongoose.connect(process.env.DB_URL);
-		await seedContests()
+		// seedContests();
 		app.listen(PORT, () => console.log(`server was started on port = ${PORT}`));
 	} catch (e) {
 		console.log(e);

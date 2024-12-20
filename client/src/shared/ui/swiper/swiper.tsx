@@ -8,7 +8,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Skeleton } from "../skeleton/skeleton";
 
 interface CustomSwiperProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     width?: number | string;
 }
 

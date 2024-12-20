@@ -14,7 +14,7 @@ router.post(
 router.post('/login', userController.login);
 router.post('/logout', userController.logout);
 router.get('/refresh', userController.refresh);
-router.get('/contests', contestService.getContest)
+router.get('/contests', userController.getContests)
 router.get('/users', authMiddleware, userController.getUsers);
 
 module.exports = router;

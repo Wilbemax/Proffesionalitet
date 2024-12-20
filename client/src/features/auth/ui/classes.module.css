@@ -8,3 +8,10 @@
     color: var(--text-color);
     text-align: end;
 }
+
+.error {
+    color: var(--primary-color);
+}
+.success {
+    color: 	#cbffc0;
+}
